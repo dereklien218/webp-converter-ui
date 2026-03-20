@@ -27,7 +27,7 @@ export default function Home() {
     formData.append("file", file);
     formData.append("quality", quality.toString());
 
-    const res = await fetch("https://webp-converter-api-2x1s.onrender.com.onrender.com/convert", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/convert`, {
       method: "POST",
       body: formData,
     });
