@@ -1,3 +1,11 @@
+## Backend API
+This project uses a separate API for image conversion:
+https://github.com/dereklien218/webp-converter-api
+
+## Frontend
+UI available here: 
+https://github.com/dereklien218/webp-converter-ui
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
