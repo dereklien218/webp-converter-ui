@@ -1,44 +1,37 @@
+# WebP Converter
+
 ## Backend API
 This project uses a separate API for image conversion:
 https://github.com/dereklien218/webp-converter-api
 
-## Frontend
-UI available here: 
-https://github.com/dereklien218/webp-converter-ui
+## Overview
+I built a full-stack image conversion tool that transforms GIFs and static images into optimized WebP files, focusing on performance, usability, and real-world deployment constraints.
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Problem
+Large GIFs and images significantly impact web performance. Many existing tools are either bloated or lack a simple, fast workflow for quick conversions.
 
-## Getting Started
+## Solution
+I designed a streamlined interface that allows users to:
 
-First, run the development server:
+- Drag and drop files for quick upload
+- Adjust compression quality in real time
+- Instantly download optimized WebP files
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The experience minimizes friction between upload and result.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technical Approach
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Frontend built with Next.js and Tailwind CSS
+- Backend API built with Node.js and Express
+- Integrated native WebP tooling (gif2webp) for high-quality animated conversion
+- Deployed frontend on Vercel and backend on Render
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Key Challenge
+Serverless platforms do not support native binaries like gif2webp. To solve this, I containerized the backend using Docker, enabling reliable execution of native image processing tools in production.
 
-## Learn More
+## Outcome
+The final product is a fast, accessible tool that demonstrates:
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Full-stack architecture
+- Deployment strategy across multiple platforms
+- Handling of native dependencies in cloud environments
