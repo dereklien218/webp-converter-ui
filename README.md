@@ -4,6 +4,10 @@
 This project uses a separate API for image conversion:
 https://github.com/dereklien218/webp-converter-api
 
+## Live Demo
+View a live demo here:
+https://webp-converter-ui-one.vercel.app/
+
 ## Overview
 I built a full-stack image conversion tool that transforms GIFs and static images into optimized WebP files, focusing on performance, usability, and real-world deployment constraints.
 
