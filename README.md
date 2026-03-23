@@ -1,4 +1,4 @@
-# WebP Converter
+# WebP Converter Frontend UI
 
 ## Backend API
 This project uses a separate API for image conversion:
