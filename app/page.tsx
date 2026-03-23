@@ -11,6 +11,14 @@ export default function Home() {
   const [convertedUrl, setConvertedUrl] = useState<string | null>(null);
   const [slider, setSlider] = useState(50);
 
+  const reset = () => {
+    setFile(null);
+    setPreviewUrl(null);
+    setConvertedUrl(null);
+    setSlider(50);
+    setQuality(80);
+  };
+
   // Create preview URL
   useEffect(() => {
     if (!file) {
@@ -164,6 +172,7 @@ export default function Home() {
             </div>
           </div>
         )}
+
         {/* DOWNLOAD BUTTON */}
         {convertedUrl && (
           <button
@@ -173,9 +182,23 @@ export default function Home() {
               a.download = "converted.webp";
               a.click();
             }}
-            className="mt-2 mb-4 w-full py-2 rounded-lg bg-white text-black text-sm font-medium hover:bg-neutral-200 transition cursor-pointer"
+            className="mt-1 w-full py-2 rounded-lg bg-white text-black text-sm font-medium hover:bg-neutral-200 transition cursor-pointer"
           >
             Download WebP
+          </button>
+        )}
+
+        {/* RESET BUTTON */}
+        {convertedUrl && (
+          <button
+            onClick={reset}
+            className="
+              mt-2 mb-6 w-full py-2 rounded-lg text-sm font-medium
+              border border-white/10 bg-white/5
+              hover:bg-white/10 transition
+            "
+          >
+            Convert another file
           </button>
         )}
 
